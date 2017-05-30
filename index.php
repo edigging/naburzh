@@ -100,7 +100,7 @@
 							<article>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus modi dolores, numquam totam, neque voluptatum nihil repudiandae nesciunt est cum asperiores voluptatem quod blanditiis distinctio officiis exercitationem, autem esse ad vitae vel saepe fuga amet velit dolorum. Velit totam, placeat vero perspiciatis a qui ad voluptates dolorum, inventore, reiciendis ratione!
 							</article>
-							<h4>Александр Волков</h4>
+							<h4>Александр Зайцев</h4>
 							<p>Web Designer</p>
 						</div>
 						<div class="clearfix"></div>
@@ -112,9 +112,9 @@
 						</div>
 						<div class="text">
 							<article>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								Hello World!
 							</article>
-							<h4>Александр Волков</h4>
+							<h4>Александр </h4>
 							<p>Web Designer</p>
 						</div>
 						<div class="clearfix"></div>
