@@ -204,23 +204,24 @@
 						<p>Latvia, Riga, Lubanas 76, LV1073</p>
 					</div>
 				</div>
-				<form action="contact.php">
+				<form action="" id="form2">
 					<div class="half">
 						<div class="input name">
-							<input type="text" placeholder="Имя" required>
-						</div>
+						<input type="text" placeholder="Ваше имя" name="name">
+					</div>
 					</div>
 					<div class="half">
 						<div class="input tel">
-							<input type="text" placeholder="Телефон" required>
+							<input type="text" placeholder="Номер телефона" name="phone">
 						</div>
 					</div>
 					<div class="clearfix"></div>
 					<div class="input mail">
-						<input type="text" placeholder="E-mail" required>
+						<input type="email" placeholder="E-mail" name="mail">
 					</div>
 					<input type="hidden" name="formsended" value="">
-					<button>Связаться с нами</button>
+
+					<input type="submit" name="submit" value="Связаться с нами" class="submit" >
 				</form>
 				<div class="clearfix"></div>
 			</div>
@@ -238,22 +239,23 @@
 			<p>
 				Менеджер свяжется с Вами в ближайшие неколько минут и подробно проконсультирует!
 			</p>
-			<form action="#" id="form">
+			<form action="" id="form">
 				<div class="input name">
-					<input type="text" placeholder="Ваше имя" required name="name">
+					<input type="text" placeholder="Ваше имя" name="name">
 				</div>
 				<div class="input tel">
-					<input type="text" placeholder="Номер телефона" name="phone" required>
+					<input type="text" placeholder="Номер телефона" name="phone">
 				</div>
 				<div class="input mail">
-					<input type="text" placeholder="E-mail" name="phone" required>
+					<input type="email" placeholder="E-mail" name="mail">
 				</div>
 				<input type="hidden" name="formsended" value="" id="formsended"> 
-				<button>Отправить</button>
+				<!-- <button>Отправить</button> -->
+				<input type="submit" name="submit" value="Отправить" class="submit">
 			</form>
 		</div>
 
-		<div class="modal" id="ready">
+		<div class="modal" id="success">
 			<h3>Спасибо!</h3>
 			<p>Наш специалист свяжется с Вами в ближайшее время!</p>
 		</div>
@@ -266,6 +268,40 @@
 	</div>
 
 	<script src="scripts/all.js"></script>
+	<script src="scripts/jquery.validate.js"></script>
+	
 	<script src="scripts/scripts.js"></script>
+
+	<style type="text/css">
+		label.error {font-size: 13px;color: #fff;position: absolute;top: -20px;left: 50%;background-color: #CA2727;padding: 3px; text-align: center; font-style: italic;margin: 0 0 0 -103px; width: 200px;}
+		label.error:after {content:"";position: absolute;margin-left: -12px;bottom: -20px;border: 10px solid transparent;border-top: 10px solid #CA2727;left: 50%;}
+		input.error {border:1px solid #F00!important;}
+		.submit {
+		    color: #fff;
+		    font-family: 'Bliss Pro Medium';
+		    height: 60px;
+		    -webkit-border-radius: 40px;
+		    -webkit-background-clip: padding-box;
+		    -moz-border-radius: 40px;
+		    -moz-background-clip: padding;
+		    border-radius: 40px;
+		    text-align: center;
+		    font-size: 24px;
+		    background: #1380fb;
+		    border: 2px solid #1380fb;
+		    width: 100%;
+		    margin-top: 14px;
+		    -webkit-transition: .2s;
+		    -o-transition: .2s;
+		    transition: .2s;
+		    cursor:pointer;
+		}
+		.submit:hover {
+		    background: 0 0;
+		    color: #1380fb;
+		}
+		#form2 .submit {color:#fff;}
+		#form2 .submit:hover {color:#1380fb;}
+	</style>
 </body>
 </html> 
