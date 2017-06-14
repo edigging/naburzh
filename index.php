@@ -70,7 +70,7 @@
 			<a href="#" class="modal_open" data-target="Заказать тарифную сетку. Курьерка">Заказать тарифную сетку</a>
 		</section>
 	</div>
-
+<!-- 
 	<div class="clients">
 		<section>
 			<h4>Что о нас говорят</h4>
@@ -124,7 +124,7 @@
 			</div>
 		</section>
 	</div>
-
+-->
 	<div class="accaunt" id="accaunt">
 		<section>
 			<article>
@@ -204,7 +204,7 @@
 						<p>Latvia, Riga, Lubanas 76, LV1073</p>
 					</div>
 				</div>
-				<form action="#">
+				<form action="contact.php">
 					<div class="half">
 						<div class="input name">
 							<input type="text" placeholder="Имя" required>
