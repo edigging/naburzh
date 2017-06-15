@@ -5,13 +5,13 @@ $(document).ready(function() {
     });
     /**
      $('.clients .slider_wrap .slider').owlCarousel({
-		autoPlay: true, 
-		nav : true, 
+		autoPlay: true,
+		nav : true,
 		slideSpeed : 1300,
 		smartSpeed : 1300,
 		fluidSpeed : 1300,
 		navSpeed : 1300,
-		paginationSpeed : 1400,			     
+		paginationSpeed : 1400,
 		pagination:true,
 		padding: 0,
 		navText: "",
@@ -77,20 +77,22 @@ $(document).ready(function() {
         },
         messages: {
             name: {
-                required: "Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ.",
+                required: "Введите ваше имя.",
             },
             phone: {
-                required: "Р’РІРµРґРёС‚Рµ РїСЂР°РІРёР»СЊРЅС‹Р№ РЅРѕРјРµСЂ.",
-                minlength: "Р’РІРµРґРёС‚Рµ РїСЂР°РІРёР»СЊРЅС‹Р№ РЅРѕРјРµСЂ.",
+                required: "Введите правильный номер.",
+                minlength: "Введите правильный номер.",
             },
             mail: {
-                required: "Р’РІРµРґРёС‚Рµ РІР°С€ Email.",
-                minlength: "Р’РІРµРґРёС‚Рµ РІР°С€ Email.",
-                mail: "РќРµРІРµСЂРЅРѕ Р·Р°РїРѕР»РЅРµРЅРѕ РїРѕР»Рµ.",
+                required: "Введите ваш Email.",
+                minlength: "Введите ваш Email.",
+                mail: "Неверно заполнено поле.",
             },
 
         },
         submitHandler: function(form) {
+            var msg = $(form).serialize();
+
             $.ajax({
                 type: 'POST',
                 url: 'mailer.php',
@@ -127,20 +129,22 @@ $(document).ready(function() {
         },
         messages: {
             name: {
-                required: "Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ.",
+                required: "Введите ваше имя.",
             },
             phone: {
-                required: "Р’РІРµРґРёС‚Рµ РїСЂР°РІРёР»СЊРЅС‹Р№ РЅРѕРјРµСЂ.",
-                minlength: "Р’РІРµРґРёС‚Рµ РїСЂР°РІРёР»СЊРЅС‹Р№ РЅРѕРјРµСЂ.",
+                required: "Введите правильный номер.",
+                minlength: "Введите правильный номер.",
             },
             mail: {
-                required: "Р’РІРµРґРёС‚Рµ РІР°С€ Email.",
-                minlength: "Р’РІРµРґРёС‚Рµ РІР°С€ Email.",
-                mail: "РќРµРІРµСЂРЅРѕ Р·Р°РїРѕР»РЅРµРЅРѕ РїРѕР»Рµ.",
+                required: "Введите ваш Email.",
+                minlength: "Введите ваш Email.",
+                mail: "Неверно заполнено поле.",
             },
 
         },
         submitHandler: function(form) {
+            var msg = $(form).serialize();
+
             $.ajax({
                 type: 'POST',
                 url: 'mailer.php',
@@ -155,58 +159,5 @@ $(document).ready(function() {
             return false;
         }
     });
-
-
-    /**
-
-     $('#form').submit(function(e) {
-		e.preventDefault();
-		var msg  = $(this).serialize();
-
-		$.ajax({
-			type: 'POST',
-			url: 'mailer.php',
-			data:  msg,
-			success: function(data) {
-				$.fancybox.open('#success');           
-			},
-			error:  function(xhr, str){
-				$.fancybox.open('#notsended');
-			}
-		});
-
-		return false;
-	});
-
-     **/
-
-    /*
-
-
-
-
-
-     $('#form').submit(function(e) {
-     e.preventDefault();
-     var msg  = $(this).serialize();
-
-     $.ajax({
-     type: 'GET',
-     url: 'contact.php',
-     data:  msg,
-     success: function(data) {
-     $.fancybox.open('#success');
-     },
-     error:  function(xhr, str){
-     $.fancybox.open('#notsended');
-     }
-     });
-
-     return false;
-     });
-
-     */
-
-
 
 });
