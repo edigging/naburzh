@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="top_screen">
-		<header data-login="<?php echo $_ENV['SMTP_LOGIN']; ?>" data-password="<?php echo $_ENV['SMTP_PASSWORD']; ?>">
+		<header>
 			<section>
 				<a href="#!" class="logo">NABURZH<span>.COM</span></a>
 				<ul>
