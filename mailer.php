@@ -1,8 +1,11 @@
 <?php
 // пример использования
 require_once "SendMailSmtpClass.php"; // подключаем класс
- 
-$mailSMTP = new SendMailSmtpClass('aftp4321@gmail.com', 'b8XO2HC3', 'smtp.gmail.com', 'Naburzh', 465); // создаем экземпляр класса
+
+define('SMTP_LOGIN', $_ENV['SMTP_LOGIN']);
+define('SMTP_PASSWORD', $_ENV['SMTP_PASSWORD']);
+
+$mailSMTP = new SendMailSmtpClass(SMTP_LOGIN, SMTP_PASSWORD, 'smtp.gmail.com', 'Naburzh', 465); // создаем экземпляр класса
 // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
 
   $name = isset($_POST["name"]) ? "<br /><b>Имя:</b> " . $_POST["name"] : "";
@@ -13,7 +16,7 @@ $mailSMTP = new SendMailSmtpClass('aftp4321@gmail.com', 'b8XO2HC3', 'smtp.gmail.
 // заголовок письма
 $headers= "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=utf-8\r\n"; // кодировка письма
-$headers .= "From: Naburzh <aftp4321@gmail.com>\r\n"; // от кого письмо
+$headers .= "From: Naburzh <" . SMTP_LOGIN . ">\r\n"; // от кого письмо
 $content = "$name $phone $mail $formsended";
 $result =  $mailSMTP->send('o.kosmacka@naburzh.com', 'Naburzh', $content, $headers); // отправляем письмо
 // $result =  $mailSMTP->send('Кому письмо', 'Тема письма', 'Текст письма', 'Заголовки письма');
