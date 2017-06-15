@@ -2,8 +2,8 @@
 // пример использования
 require_once "SendMailSmtpClass.php"; // подключаем класс
 
-define('SMTP_LOGIN', $_ENV['SMTP_LOGIN']);
-define('SMTP_PASSWORD', $_ENV['SMTP_PASSWORD']);
+define('SMTP_LOGIN', $_SERVER['SMTP_LOGIN']);
+define('SMTP_PASSWORD', $_SERVER['SMTP_PASSWORD']);
 
 $mailSMTP = new SendMailSmtpClass(SMTP_LOGIN, SMTP_PASSWORD, 'smtp.gmail.com', 'Naburzh', 465); // создаем экземпляр класса
 // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
