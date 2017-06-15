@@ -1,3 +1,5 @@
 <?php
 
-print_r($_ENV);
+   while (list($var,$value) = each ($_SERVER)) {
+       echo "$var => $value <br />";
+   }
