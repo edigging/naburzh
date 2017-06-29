@@ -183,7 +183,7 @@
 							<img src="img/who.jpg" alt="">
 						</div>
 						<div class="name">
-							<div class="s">Космацка</div>
+							<div class="s"></div>
 							<div class="n">Ольга</div>
 						</div>
 						<div class="clearfix"></div>
