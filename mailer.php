@@ -5,12 +5,6 @@ require_once "SendMailSmtpClass.php"; // подключаем класс
 define('SMTP_LOGIN', $_SERVER['SMTP_LOGIN']);
 define('SMTP_PASSWORD', $_SERVER['SMTP_PASSWORD']);
 
-echo SMTP_LOGIN;
-echo "\n";
-echo SMTP_PASSWORD;
-
-exit;
-
 $mailSMTP = new SendMailSmtpClass(SMTP_LOGIN, SMTP_PASSWORD, 'smtp.gmail.com', 'Naburzh', 465); // создаем экземпляр класса
 // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
 
