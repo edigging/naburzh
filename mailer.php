@@ -45,6 +45,8 @@ if (isset($name) && isset($phone) && isset($mail))
 
     $mail = mail($to, $subject, $formsended, $headers);
 
+    echo $mail;
+
     if($mail)
     {
         $output = ['status' => 'success', 'message' => 'Письмо отправлено'];
