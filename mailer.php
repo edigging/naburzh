@@ -38,6 +38,8 @@ $output = ['status' => 'error', 'message' => 'Письмо не отправле
 
 if ($name != '' && $phone != '' && $mail != '')
 {
+    echo "here";
+    
     $subject  = "Вопрос от: $name";
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
     $headers .= "From: <$mail>\r\n";
