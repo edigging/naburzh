@@ -38,16 +38,19 @@ $output = ['status' => 'error', 'message' => 'Письмо не отправле
 
 if ($name != '' && $phone != '' && $mail != '')
 {
-    echo "here";
-    
-    $subject  = "Вопрос от: $name";
-    $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers .= "From: <$mail>\r\n";
-    $headers .= "Reply-To: $mail\r\n";
+    try
+    {
+        $subject  = "Вопрос от: $name";
+        $headers  = "Content-type: text/html; charset=utf-8 \r\n";
+        $headers .= "From: <$mail>\r\n";
+        $headers .= "Reply-To: $mail\r\n";
 
-    $mail = mail($to, $subject, $formsended, $headers);
-
-    echo $mail;
+        $mail = mail($to, $subject, $formsended, $headers);
+    }
+    catch (Exception $e) {
+        echo $e;
+        exit;
+    }
 
     if($mail)
     {
