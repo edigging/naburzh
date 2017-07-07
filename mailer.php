@@ -57,5 +57,6 @@ else
     echo $formsended;
 }
 
-echo json_encode($output);
+// echo json_encode($output);
+print_r($output);
 ?>
