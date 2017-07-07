@@ -5,10 +5,10 @@ require_once "SendMailSmtpClass.php"; // подключаем класс
 define('SMTP_LOGIN', $_SERVER['SMTP_LOGIN']);
 define('SMTP_PASSWORD', $_SERVER['SMTP_PASSWORD']);
 
+echo json_decode([SMTP_LOGIN, SMTP_PASSWORD, 'smtp.gmail.com', 'Naburzh', 465]);
+
 $mailSMTP = new SendMailSmtpClass(SMTP_LOGIN, SMTP_PASSWORD, 'smtp.gmail.com', 'Naburzh', 465); // создаем экземпляр класса
 // $mailSMTP = new SendMailSmtpClass('логин', 'пароль', 'хост', 'имя отправителя');
-
-echo json_decode([SMTP_LOGIN, SMTP_PASSWORD, 'smtp.gmail.com', 'Naburzh', 465]);
 
   $name = isset($_POST["name"]) ? "<br /><b>Имя:</b> " . $_POST["name"] : "";
   $phone = isset($_POST["phone"]) ? "<br /><b>Телефон:</b> " . $_POST["phone"] : "";
