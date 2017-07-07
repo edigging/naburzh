@@ -36,7 +36,7 @@ $to  = 'o.kosmacka@naburzh.com';
 
 $output = ['status' => 'error', 'message' => 'Письмо не отправлено'];
 
-if (isset($name) && isset($phone) && isset($mail))
+if ($name != '' && $phone != '' && $mail != '')
 {
     $subject  = "Вопрос от: $name";
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
@@ -51,6 +51,10 @@ if (isset($name) && isset($phone) && isset($mail))
     {
         $output = ['status' => 'success', 'message' => 'Письмо отправлено'];
     }
+}
+else
+{
+    echo $formsended;
 }
 
 echo json_encode($output);
