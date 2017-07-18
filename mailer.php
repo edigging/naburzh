@@ -32,7 +32,8 @@ $name = isset($_POST["name"]) ? "<br /><b>Имя:</b> " . $_POST["name"] : "";
 $phone = isset($_POST["phone"]) ? "<br /><b>Телефон:</b> " . $_POST["phone"] : "";
 $mail = isset($_POST["mail"]) ? "<br /><b>E-mail:</b> " . $_POST["mail"] : "";
 $formsended = isset($_POST["formsended"]) ? "<br /><b>Отправлено с формы::</b> " . $_POST["formsended"] : "";
-$to  = 'o.kosmacka@naburzh.com';
+// $to  = 'o.kosmacka@naburzh.com';
+$to  = 'kremen.verst@gmail.com';
 
 $output = ['status' => 'error', 'message' => 'Письмо не отправлено'];
 
@@ -62,6 +63,5 @@ else
     echo $formsended;
 }
 
-// echo json_encode($output);
-print_r($output);
+echo json_encode($output);
 ?>
